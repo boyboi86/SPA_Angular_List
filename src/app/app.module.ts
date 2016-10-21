@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { RecipeBookAppComponent } from "./recipe-book.component";
 import { HeaderComponent } from "./header.component";
@@ -32,7 +33,8 @@ import { routing } from "./app.routing";
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [RecipeBookAppComponent]
