@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ShoppingListAddComponent } from "./shopping-list-add.component";
 import { Ingredient } from "../shared";
 import { ShoppingListService } from "./shopping-list.service";
 
@@ -17,7 +18,11 @@ export class ShoppingListComponent implements OnInit {
     this.items = this.sls.getItems();
   }
 
-  onSelectItem(item: Ingredient){
+  onSelectItem(item: Ingredient) {
     this.selectedItem = item;
+  }
+
+  onCleared() {
+    this.selectedItem = null;
   }
 }
