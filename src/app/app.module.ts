@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 
 import { RecipeBookAppComponent } from "./recipe-book.component";
 import { HeaderComponent } from "./header.component";
@@ -35,7 +36,8 @@ import { routing } from "./app.routing";
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    routing
+    routing,
+    HttpModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [RecipeBookAppComponent]
